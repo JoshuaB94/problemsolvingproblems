@@ -11,7 +11,7 @@
 //     }
 // }
 
-//Reserve a String
+//Reverse a String
 function aStringReversed(aWord){
     let reversedString = "";
     for(let i = aWord.length - 1; i >= 0; i--){
@@ -21,4 +21,4 @@ function aStringReversed(aWord){
     return reversedString;
 }
 
-aStringReversed("Hello");
+aStringReversed("Racecar");

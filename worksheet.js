@@ -32,3 +32,19 @@ for(let i = 0; i < myStringArray.length; i++){
 
 let newString = myStringArray.join(" "); //Now to join the elements of the array back into a string using a blankspace as a separator
 console.log(newString);
+
+//Compress a String of Characters
+function stringCompression(aString){
+    let stringResult = '';
+    let count = 0;
+    for(let i = 0; i < aString.length; i++){
+        count++;
+        if(aString[i] != aString[i + 1]){
+            stringResult += aString[i] + count;
+            count = 0;
+        }
+    }
+    console.log(stringResult);
+}
+
+stringCompression("aaabbbbbccccaacccbbbaaabbbaaa");

@@ -48,3 +48,31 @@ function stringCompression(aString){
 }
 
 stringCompression("aaabbbbbccccaacccbbbaaabbbaaa");
+
+//Palindrome - a word, phrase, or sequence that reads the same backward as forward
+//This function checks if a string is Palindrome or not
+function checkIfPalindrome(aWordPhraseOrSequence){
+    let paliWord = aWordPhraseOrSequence.length - 1;
+    for(let i = 0; i < paliWord/2; i++){
+        let paliX = aWordPhraseOrSequence[i]; //forward character
+        let paliY = aWordPhraseOrSequence[paliWord - i]; //backward character
+        if(paliX != paliY){
+            return false;
+        }
+    }
+    return true;
+}
+
+//This function logs a true or false statement based on whether the string is Palindrome or not
+function ifPalindrome(aStringReadTheSame){
+    let result = checkIfPalindrome(aStringReadTheSame);
+    if(result == true){
+        console.log("This string is a Palindrome");
+    } else {
+        console.log("This string is not a Palindrome");
+    }
+}
+
+ifPalindrome("mayamoodybabydoomayam");
+ifPalindrome("race");
+ifPalindrome("racecar");
